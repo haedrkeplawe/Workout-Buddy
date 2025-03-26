@@ -13,7 +13,7 @@ app.use(cookieParser());
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:3000", "http://localhost:3001","https://workout-buddy-1.netlify.app/","https://workout-buddy-2.netlify.app/"],
+    origin: ["http://localhost:3000", "http://localhost:3001","https://workout-buddy-1.netlify.app","https://workout-buddy-2.netlify.app"],
   })
 );
 app.use(express.urlencoded({ extended: false }));
