@@ -1,0 +1,210 @@
+:root {
+  --primary-green: #1aac83;
+  --primary-white: #f1f1f1;
+  --primary-dark: #7c7c7c;
+  --primary-error: #d32e2e;
+  --primary-dark-black: #1e1e1e;
+  --primary-dark-black2: #454545;
+}
+.App {
+  min-height: 100vh;
+  background-color: var(--primary-white);
+  transition: 0.3s;
+}
+.App.moon {
+  background-color: var(--primary-dark-black);
+}
+.error {
+  color: var(--primary-error);
+  font-size: 18px;
+  font-weight: 400;
+}
+button:disabled {
+  background-color: var(--primary-dark);
+}
+/* Global */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+input {
+  outline: none;
+}
+.btn {
+  background: var(--primary-green);
+  border: navajowhite;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+a,
+button {
+  cursor: pointer;
+}
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 25px;
+  align-items: center;
+  background-color: white;
+}
+.App.moon header {
+  background-color: var(--primary-dark-black2);
+}
+header .main {
+  font-size: 30px;
+  font-weight: 700;
+}
+.App.moon header .main {
+  color: white;
+}
+header > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: var(--primary-white);
+  padding: 7px 8px;
+  border-radius: 14px;
+}
+.App.moon header > div {
+  background: var(--primary-dark);
+  color: #d7d7d7;
+}
+header > div svg {
+  cursor: pointer;
+}
+header button {
+  background: var(--primary-white);
+  color: var(--primary-green);
+  border: 1px solid var(--primary-green);
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+/* Signup & Login */
+.auth-page form {
+  max-width: 400px;
+  margin: 80px auto 0 auto;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 34px;
+}
+.App.moon .auth-page form {
+  background: var(--primary-dark-black2);
+  color: white;
+}
+.auth-page form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  gap: 4px;
+}
+.auth-page form input {
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-dark);
+}
+.App.moon .auth-page form input {
+  background: var(--primary-dark);
+}
+/* index-page */
+.index-page {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+  padding: 40px 25px;
+}
+.App.moon .index-page .workout-form h3 {
+  color: white;
+}
+.index-page .workout {
+  margin-bottom: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 0px #4b4b4b52;
+}
+.App.moon .index-page .workout {
+  background: var(--primary-dark-black2);
+}
+.index-page .workout .head {
+  display: flex;
+  justify-content: space-between;
+}
+.index-page .workout .head h2 {
+  color: var(--primary-green);
+  font-weight: 500;
+}
+.index-page .workout .head svg {
+  border: none;
+  border-radius: 7px;
+  padding: 7px 8px;
+  color: var(--primary-dark);
+  font-size: 15px;
+  background-color: var(--primary-white);
+  margin-left: 10px;
+  cursor: pointer;
+}
+.index-page .workout .info > div {
+  display: flex;
+  gap: 6px;
+  color: #9f9f9f;
+  font-size: 0.9rem;
+}
+.App.moon .index-page label {
+  color: var(--primary-white);
+}
+.index-page .workout .info span {
+  color: #474747;
+}
+.App.moon .index-page .workout .info span {
+  color: white;
+}
+.index-page form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 20px;
+}
+.index-page form > div.button {
+  gap: 1px;
+}
+.index-page form input {
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-dark);
+}
+.App.moon .index-page form input {
+  background: var(--primary-dark);
+}
+.index-page form input.error {
+  border: 1px solid var(--primary-error);
+  color: black;
+}
+.index-page form button {
+  margin: 5px 0;
+}
+.index-page form button.cancel {
+  background: var(--primary-dark);
+}
+@media (max-width: 991px) {
+  .index-page {
+    grid-template-columns: 3fr 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 676px) {
+  .index-page {
+    grid-template-columns: 1fr;
+  }
+}
